@@ -9,7 +9,7 @@ var reccomend_Calories = "";
 
 
 function write_Text(){
-  setText("decision_Box","Your Choice:"+"We reccomend "+ reccomend+"."+ reccomend_Calories);
+  setText("decision_Box","Your Choice:"+"\n"+"We reccomend "+ reccomend+"."+ reccomend_Calories);
   
 }
 
@@ -20,7 +20,21 @@ function update_Text(){
       reccomend_Calories = "Try measuring the amount of oatmeal in order to eliminate excess.";
       write_Text();
     }
+    else if(perpare_Time == "<10" && calories == "Medium"){
+      reccomend = "Oatmeal";
+      reccomend_Calories = "Try adding fruit to your outmeal.";
+      write_Text();
+  
+    }
+    else if(perpare_Time == "<10" && calories == "High"){
+      reccomend = "Oatmeal";
+      reccomend_Calories = "Try adding cocunut to your outmeal.";
+      write_Text();
+  
+    }
   }
+  if (food_Type = )
+
 }
 
 onEvent("choose_Button", "click", function( ) {
@@ -33,3 +47,5 @@ onEvent("choose_Button", "click", function( ) {
 });
 
 
+
+  
