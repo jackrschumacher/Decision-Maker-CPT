@@ -9,7 +9,7 @@ var reccomend_Calories = "";
 
 
 function write_Text(){
-  setText("decision_Box","Your Choice:"+"\n"+"We reccomend "+ reccomend+"."+ reccomend_Calories);
+  setText("decision_Box","Your Choice:"+"\n"+"\n"+"We reccomend "+ reccomend+"."+ reccomend_Calories+"\n"+"\n"+"Enjoy!");
   
 }
 
@@ -47,14 +47,28 @@ function update_Text(){
         reccomend = "Avacado Toast";
         reccomend_Calories = "Try adding fruits and other vegtables to your meal.";
         write_Text();
-        
+      }
+      else if(perpare_Time == ">20" && calories == "Low"){
+        reccomend = "Pancakes";
+        reccomend_Calories = "Try adding fruits to your pancake.";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "Medium"){
+        reccomend = "Pancakes";
+        reccomend_Calories = "Try adding choclate to your pancake.";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "High"){
+        reccomend = "Pancakes";
+        reccomend_Calories = "Try adding choclate and syrup to your pancake.";
+        write_Text();
+      }  
     }
     else{
       reccomend = "Invalid";
     }
 
-}
-  
+
 }
 
 
