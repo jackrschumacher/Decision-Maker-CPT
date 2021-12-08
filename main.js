@@ -67,7 +67,24 @@ function update_Text(){
     else{
       reccomend = "Invalid";
     }
-
+  if (food_Type == "Meats"){
+      if(perpare_Time == "<10" && calories == "Low"){
+        reccomend = "Sausage";
+        reccomend_Calories = "Try Cutting the Sausage in order to only eat as much as you need";
+        write_Text();
+    }
+      else if(perpare_Time == "<10" && calories == "Medium"){
+        reccomend = "Sausage";
+        reccomend_Calories = "Try eating fruits and vegatables with your sausage.";
+        write_Text();
+  
+    }
+      else if(perpare_Time == "<10" && calories == "High"){
+        reccomend = "Sausage";
+        reccomend_Calories = "Try eating toast with your sausage";
+        write_Text();
+    } 
+  }
 
 }
 
@@ -81,6 +98,10 @@ onEvent("choose_Button", "click", function( ) {
   playSound("sound://category_app/app_interface_button_2.mp3", false);
   setScreen("decisionScreen");
   update_Text();
+});
+
+onEvent("Back_Button", "click", function( ) {
+  setScreen("mainScreen");
 });
 
 
