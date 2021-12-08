@@ -64,8 +64,8 @@ function update_Text(){
         write_Text();
       }  
     }
-    else{
-      reccomend = "Invalid";
+      else{
+        reccomend = "Invalid";
     }
   if (food_Type == "Meats"){
       if(perpare_Time == "<10" && calories == "Low"){
@@ -84,9 +84,46 @@ function update_Text(){
         reccomend_Calories = "Try eating toast with your sausage";
         write_Text();
     } 
+      else if(perpare_Time == ">10 and <20" && calories == "Low"){
+        reccomend = "a Breakfast Sandwich";
+        reccomend_Calories = "Try adding greens (spinach,etc) to your sandwich.";
+        write_Text();
+        
+    }
+      else if(perpare_Time == ">10 and <20" && calories == "Medium"){
+        reccomend = "a Breakfast Sandwich";
+        reccomend_Calories = "Try adding tomatoes and other vegtables to your sandwhich";
+        write_Text();
+      } 
+      else if(perpare_Time == ">10 and <20" && calories == "High"){
+        reccomend = "a Breakfast Sandwhich";
+        reccomend_Calories = "Try adding fruits to your meal.";
+        write_Text();
+      }
+      else if(perpare_Time == ">20" && calories == "Low"){
+        reccomend = "a Casserole";
+        reccomend_Calories = "Try adding cheese to your casserole.";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "Medium"){
+        reccomend = "Pancakes";
+        reccomend_Calories = "Try adding fruits to your meal.";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "High"){
+        reccomend = "Pancakes";
+        reccomend_Calories = "Try adding vegtables to your meal.";
+        write_Text();
+      } 
+      else{
+        reccomend = "Invalid";
+        write_Text();
+        
+      }
+      } 
   }
 
-}
+
 
 
 
