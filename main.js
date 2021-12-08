@@ -38,9 +38,14 @@ function update_Text(){
         write_Text();
         
     }
-      else if(perpare_Time == ">10 and <20" && calories == "Low"){
+      else if(perpare_Time == ">10 and <20" && calories == "Medium"){
         reccomend = "Avacado Toast";
-        reccomend_Calories = "Try adding other Bagel Seasoning to your toast";
+        reccomend_Calories = "Try adding Bagel Seasoning to your toast";
+        write_Text();
+      } 
+      else if(perpare_Time == ">10 and <20" && calories == "High"){
+        reccomend = "Avacado Toast";
+        reccomend_Calories = "Try adding fruits and other vegtables to your meal.";
         write_Text();
         
     }
