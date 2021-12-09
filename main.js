@@ -12,6 +12,10 @@ function write_Text(){
   setText("decision_Box","Your Choice:"+"\n"+"\n"+"We reccomend "+ reccomend+"."+ reccomend_Calories+"\n"+"\n"+"Enjoy!");
   
 }
+function invalid(){
+  playSound("sound://category_retro/retro_game_echo_error_4.mp3", false);
+  setText("decision_Box","Invalid"+"\n"+"\n"+"Please Try Again");
+}
 
 function update_Text(){
   
@@ -65,7 +69,7 @@ function update_Text(){
       }  
     }
       else{
-        reccomend = "Invalid";
+        invalid();
     }
   if (food_Type == "Meats"){
       if(perpare_Time == "<10" && calories == "Low"){
@@ -116,12 +120,30 @@ function update_Text(){
         write_Text();
       } 
       else{
-        reccomend = "Invalid";
-        write_Text();
-        
+        invalid();
       }
-      } 
   }
+  if(food_Type == "Protein"){
+      if(perpare_Time == "<10" && calories == "Low"){
+        reccomend = "Eggs";
+        reccomend_Calories = "Try adding cheese to your egg.";
+        write_Text();
+    }
+      else if(perpare_Time == "<10" && calories == "Medium"){
+        reccomend = "Eggs";
+        reccomend_Calories = "Try eating toast with your egg.";
+        write_Text();
+  
+    }
+      else if(perpare_Time == "<10" && calories == "High"){
+        reccomend = "Egg";
+        reccomend_Calories = "Try eating fruit and vegtables with your egg.";
+        write_Text();
+    }
+    
+  }
+      
+}
 
 
 
@@ -138,6 +160,7 @@ onEvent("choose_Button", "click", function( ) {
 });
 
 onEvent("Back_Button", "click", function( ) {
+  playSound("sound://category_bell/choose_background.mp3", false);
   setScreen("mainScreen");
 });
 
