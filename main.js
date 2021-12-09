@@ -13,7 +13,6 @@ function write_Text(){
   
 }
 function invalid(){
-  playSound("sound://category_retro/retro_game_echo_error_4.mp3", false);
   setText("decision_Box","Invalid"+"\n"+"\n"+"Please Try Again");
 }
 
@@ -110,12 +109,12 @@ function update_Text(){
         write_Text();
       }  
       else if(perpare_Time == ">20" && calories == "Medium"){
-        reccomend = "Pancakes";
+        reccomend = "a Casserole";
         reccomend_Calories = "Try adding fruits to your meal.";
         write_Text();
       }  
       else if(perpare_Time == ">20" && calories == "High"){
-        reccomend = "Pancakes";
+        reccomend = "a Casserole";
         reccomend_Calories = "Try adding vegtables to your meal.";
         write_Text();
       } 
@@ -140,6 +139,41 @@ function update_Text(){
         reccomend_Calories = "Try eating fruit and vegtables with your egg.";
         write_Text();
     }
+      else if(perpare_Time == ">10 and <20" && calories == "Low"){
+        reccomend = "Sausage and Potatoes";
+        reccomend_Calories = "Try adding other vegtables such as tomatoes to your Sausage and Potatoes";
+        write_Text();
+        
+    }
+      else if(perpare_Time == ">10 and <20" && calories == "Medium"){
+        reccomend = "Sausage and Potatoes";
+        reccomend_Calories = "Try Cheese to your sausage and potatoes";
+        write_Text();
+    } 
+      else if(perpare_Time == ">10 and <20" && calories == "High"){
+        reccomend = "Sausage and Potatoes";
+        reccomend_Calories = "Try putting toast bits in your sausage and potatoes";
+        write_Text();
+    }
+      else if(perpare_Time == ">20" && calories == "Low"){
+        reccomend = "Eggs, Patatoes, and Sausage";
+        reccomend_Calories = "Try adding cheese to your meal.";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "Medium"){
+        reccomend = "Eggs, Patatoes, and Sausage";
+        reccomend_Calories = "Try having toast with your meal";
+        write_Text();
+      }  
+      else if(perpare_Time == ">20" && calories == "High"){
+        reccomend = "Eggs, Patatoes, and Sausage";
+        reccomend_Calories = "Try adding vegtables to your meal.";
+        write_Text();
+      } 
+      else{
+        invalid();
+      }
+    
     
   }
       
